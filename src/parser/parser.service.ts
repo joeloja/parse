@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
+import { TNode } from './parser.interface';
 
 @Injectable()
 export class ParserService {
@@ -54,7 +55,7 @@ export class ParserService {
 
     return curr;
   }
-  public parse(filepath: string): object[] {
+  public parse(filepath: string): TNode[] {
     const root = this.node('root', null);
 
     const data = fs.readFileSync(filepath, 'utf8');

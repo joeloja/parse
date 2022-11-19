@@ -34,7 +34,4 @@ export class Donations extends Model {
 
   @BelongsTo(() => Users)
   user: Users;
-
-  @BelongsTo(() => Rates)
-  currencyRate: Rates;
 }
