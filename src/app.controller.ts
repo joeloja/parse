@@ -20,7 +20,7 @@ export class AppController {
     return this.appService.giveRewardByUserDonations();
   }
 
-  @Get('/rewards/departmentdonations')
+  @Post('/rewards/departmentdonations')
   giveRewardByDepartment() {
     return this.appService.giveRewardByDepartment();
   }
